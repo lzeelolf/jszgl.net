@@ -1,0 +1,77 @@
+html,body,*{
+    margin: 0;
+    padding: 0;
+    font: 16px '微软雅黑';
+    overflow: hidden;
+    user-select: none;
+    -ms-user-select: none;
+}
+a,a:hover,a:active,a:visited{
+    text-decoration: none;
+}
+#loadingPic{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.4;
+    position: fixed;
+    z-index: 9999;
+    display: none;
+}
+#loadingPic p{
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    top: 50%;
+    left: 50%;
+    margin-top: -75px;
+    margin-left: -100px;
+}
+#banner {
+    background-color: #3a87ad;
+}
+#banner h1{
+    cursor: default;
+    font: 26px '微软雅黑';
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+#main{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#loginArea{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    left: 30%;
+}
+#loginArea h1{
+    cursor: default;
+    text-align:center;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    font-weight: normal;
+}
+#loginArea #inputArea{
+    width:100%;
+    text-align:center;
+}
+#inputArea input {
+    font-size:12px;
+}
+#login{
+    width: 80px;
+    position: relative;
+    left:50%;
+    margin-left: -40px;
+    font-size:12px;
+    font-weight: bold;
+}

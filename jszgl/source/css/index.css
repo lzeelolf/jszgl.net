@@ -1,0 +1,1064 @@
+html,body,*,ul{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family:  "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #555;
+    user-select: none;
+
+    -ms-user-select: none;
+    -moz-user-select: none;
+}
+body{
+    overflow-x: auto;
+    overflow-y: visible;
+    background-color: rgba(26, 117, 252, 0.2);
+    position: relative;
+}
+a,a:hover,a:active,a:visited{
+    text-decoration: none;
+}
+.font12px{
+    font-size: 12px;
+}
+.font14px{
+    font-size: 14px;
+}
+.marginTop20px{
+    margin-top: 20px;
+}
+.marginTop24px{
+    margin-top: 24px;
+}
+.marginLeft6px{
+    margin-left: 6px;
+}
+.marginLeft10px{
+    margin-left:10px;
+}
+#displayApplyContainer{
+    width: 100%;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    background-color: white;
+    z-index:1000;
+}
+#appendWindowContent{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: white;
+    z-index: 500;
+}
+#appendWindow{
+    width: 60%;
+    position: relative;
+    top:33%;
+    left: 20%;
+    background-color: white;
+}
+#appendWindow .appendWindowArea{
+    text-align: center;
+}
+#appendWindow p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 26px;
+    margin: 15px 0 ;
+}
+#appendWindow table{
+    display: inline-block;
+}
+#appendWindow table tr td,#appendWindow table tr th{
+    padding: 2px 4px;
+    border: 1px solid #333333;
+}
+#appendWindow table tr td input{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+#appendWindow .appendButtonArea{
+    text-align: center;
+}
+#loadingPic{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.4;
+    position: fixed;
+    z-index: 9999;
+    display: none;
+}
+#loadingPic p{
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    top: 50%;
+    left: 50%;
+    margin-top: -75px;
+    margin-left: -100px;
+}
+#bigContent{
+    width: 100%;
+    background-color: rgba(26, 117, 252, 0);
+    top: 40px;
+    height: 100%;
+}
+#bigContent #leftContent{
+    width: 12%;
+    top: 15%;
+    left: 0;
+    min-height: 200px;
+    text-align: center;
+    background-color: rgba(245, 245, 242, 1);
+    box-shadow: 0 0 5px 1px #999 ;
+    border-radius: 5px;
+    position: absolute;
+}
+#leftContent #foldButton{
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    z-index:999;
+    border-radius: 0 3px 3px 0;
+    border: 1px solid #bbbbbb;
+    background-color: rgba(245, 245, 242, 1);
+    border-left: none;
+    top: 50%;
+    margin-top: -25px;
+    right:-21px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+#foldButton:hover{
+    color: #f60;
+}
+#foldButton i{
+    color: inherit;
+    display: block;
+    line-height: 50px;
+    font-size: 20px;
+}
+.welcome{
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: bold;
+    color:#eee;
+    margin: 0 0 0 50px;
+}
+.navbar-inverse a.floatR{
+    height: 40px;
+    font-weight: bold;
+    margin-right: 40px;
+}
+.navbar-inverse a.floatR i{
+    margin-top: 10px;
+}
+.navbar-inverse .name{
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    color:#eee;
+    margin: 0 30px 0 0 ;
+}
+#bigContent #leftContent #buttonList li{
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    border-top: solid #ccc 1px;
+    position: relative;
+}
+#bigContent #leftContent #buttonList span.redPoint{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 7px;
+    height: 7px;
+    display: none;
+    background: url("../images/point.png") no-repeat;
+    background-size: 7px 7px;
+}
+#bigContent #leftContent #buttonList li:last-child{
+    border-bottom: solid #ccc 1px;
+}
+#bigContent #leftContent #buttonList li:hover,#buttonList li.cur{
+    font-weight: bold;
+    background-color: rgba(26, 117, 252, 0.5);
+    color: white;
+    transition: 0.3s;
+}
+#bigContent #rightContent{
+    position: absolute;
+    width: 86%;
+    left:14%;
+    top:40px;
+    max-height: 768px;
+    min-height: 600px;
+    background-color: rgba(245, 245, 242, 1);
+    box-shadow: 0 0 3px 1px #999 ;
+    border-radius: 2px;
+}
+#bigContent #rightContent h1#title{
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    font-size: 30px;
+    color: #333;
+}
+#bigContent #rightContent .operateContent{
+    width: 99%;
+    min-height: 460px;
+    max-height:100%;
+    margin-top: 10px;
+    padding: 0 0.5% 10px 0.5%;
+    background-color: rgba(26, 117, 252, 0);
+}
+#summaryContainer .summaryContent{
+    max-height: 600px;
+    overflow: auto;
+}
+#bigContent #rightContent .operateContent>div{
+    width: 100%;
+    min-height: 460px;
+    text-align: center;
+    display: none;
+}
+#bigContent #rightContent .operateContent #appendContainer{
+    width: 100%;
+}
+#bigContent #rightContent .operateContent #informationContainer{
+    position: relative;
+}
+#bigContent #rightContent .operateContent #informationContainer #cardPicContent{
+    position: absolute;
+    width: 40%;
+    height: 200px;
+    top: 80px;
+    left: 5%;
+    background: white;
+}
+#bigContent #rightContent .operateContent #informationContainer #cardInfoContent{
+    position: absolute;
+    background-color: whitesmoke;
+    height: 200px;
+    top: 80px;
+    left: 45%;
+    width:52%;
+}
+#bigContent #rightContent .operateContent #informationContainer #cardInfoContent p{
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    float: left;
+    width: 90px;
+    font-size: 14px;
+}
+#cardInfoContent>div{
+    width:100%;
+    overflow: hidden;
+}
+#bigContent #rightContent .operateContent #informationContainer #cardInfoContent>div>div{
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    font-size: 14px;
+    min-width: 70px;
+    float: left;
+    border-bottom: 1px solid #333;
+}
+#bigContent #rightContent .operateContent #informationContainer #cardInfoContent div.idCard{
+    width: 150px;
+}
+#bigContent #rightContent .operateContent #informationContainer #cardInfoContent div.driveType{
+    width: 50px;
+}
+#bigContent #rightContent .operateContent #applyContainer{
+    padding-top: 50px;
+}
+#bigContent #rightContent .operateContent #applyContainer #btnArea{
+    width: 260px;
+    height: 100%;
+}
+#bigContent #rightContent .operateContent #applyContainer #btnArea button{
+    margin-bottom: 30px;
+}
+#back{
+    visibility: hidden;
+}
+#bigContent #rightContent .operateContent #applyContainer #applySubmit{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    visibility: hidden;
+}
+#bigContent #rightContent .operateContent #applyContainer #print{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-left: 100px;
+    visibility: hidden;
+}
+#fixTable{
+    width: 800px;
+    height: 1120px;
+    background-color: white;
+    position: relative;
+    visibility: hidden;
+    z-index: 1000;
+}
+#fixTable h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: '宋体';
+    border:none;!important;
+    height: 180px;
+    line-height: 260px;
+}
+#fixTable #fixTableArea{
+    border: solid 1px black;
+    width: 700px;
+    position: relative;
+    left: 50px;
+    overflow: hidden;
+}
+#fixTable #fixTableArea div,#fixTable #fixTableArea span{
+    font-size: 14px;
+    font-family: '仿宋';
+}
+#fixTable #fixTableArea div{
+    overflow: hidden;
+}
+#fixTable #fixTableArea .cardIdInTable{
+    text-align: center;
+}
+#fixTable #fixTableArea #mailInTable{
+    text-indent: 0.3em;
+    font-size: 14px;
+    font-family: '仿宋';
+}
+#fixTable #fixTableArea #addressInTable{
+    text-indent: 1em;
+    font-size: 14px;
+    font-family: '仿宋';
+}
+#fixTable #fixTableArea #mobilePhoneInTable{
+    text-indent: 1em;
+    font-size: 14px;
+    font-family: '仿宋';
+}
+.textCenter{
+    text-align: center;
+}
+.float{
+    float: left;
+}
+.rela{
+    position: relative;
+}
+.abso{
+    position: absolute;
+}
+.width68{
+    width: 68px;
+}
+.width503{
+    width: 503px;
+}
+.width125{
+    width: 125px;
+}
+.width122{
+    width: 122px;
+    text-align: center;
+}
+.width64{
+    width: 64px;
+}
+.width99{
+    width: 83px;
+}
+.width24{
+    width: 24px;
+}
+.width56{
+    width: 56px;
+}
+.width149{
+    width: 149px;
+}
+.width249{
+    width: 209px;
+}
+.width575{
+    width: 575px;
+}
+.width572{
+    width: 572px;
+}
+.width404{
+    width: 404px;
+}
+.width449{
+    width: 449px;
+}
+.width174{
+    width: 174px;
+}
+.height35{
+    height: 35px;
+    line-height: 35px;
+}
+.height28{
+    height: 28px;
+
+}
+.height54{
+    height: 54px;
+    line-height: 24px;
+}
+.height70{
+    height: 70px;
+    line-height: 22px;
+}
+.height170{
+    height: 170px;
+    line-height: 170px;
+}
+.floatR{
+    float: right;
+}
+.borderRight{
+    border-right: 1px solid black;
+}
+.borderLeft{
+    border-left: 1px solid black;
+}
+.borderTop{
+    border-top: 1px solid black;
+}
+.borderBottom{
+    border-bottom: 1px solid black;
+}
+.borderAll{
+    border: 1px solid black;
+}
+.noborder{
+    border:none;
+}
+.origin label,.apply span,.apply label,.apply span{
+    font-size: 14px;
+    font-family: '仿宋';
+    font-weight: bold;
+}
+.origin input,.apply input{
+    margin: 7px 0 0 30px;
+}
+.origin label,.origin span,.apply label{
+    margin: 3px 0 0 3px;
+}
+.phyCheck label,.apply span{
+    font-size: 14px;
+    font-family: '仿宋';
+}
+.reason label{
+    line-height: 26px;
+    font-size: 14px;
+    font-family: '仿宋';
+}
+.reason input{
+    margin: 8px 0 0 15px;
+}
+#otherReasonText{
+    margin-top: 4px;
+}
+#statusContainer #applyInfo{
+    margin-top: 50px;
+    font-size: 16px;
+}
+#statusContainer #applyInfo span{
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+#bigContent #rightContent #improveContainer{
+    height: 560px;
+}
+#bigContent #rightContent #improveContainer #picContent{
+    width: 180px;
+    padding-left: 100px;
+    height: 560px;
+    padding-top: 40px;
+}
+#bigContent #rightContent #improveContainer #picContent>div{
+    width: 150px;
+    height: 150px;
+    border: 10px solid #fff;
+    line-height: 150px;
+    margin-bottom: 40px;
+}
+#bigContent #rightContent #improveContainer #formContent{
+    width: 400px;
+}
+#bigContent #rightContent #improveContainer #formContent div form{
+    display: block;
+}
+#bigContent #rightContent #improveContainer #formContent div{
+    height: 180px;
+    margin-top: 60px;
+    text-align: left;
+    margin-left: 50px;
+}
+#reasonContainer{
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1000;
+}
+#reasonContainer #reasonContent{
+    position: absolute;
+    background: white;
+    top: 30%;
+    left: 50%;
+    width: 200px;
+    height: 240px;
+    opacity: 1;
+    margin: -100px 0 0 -100px;
+    z-index: 1000;
+}
+#reasonContainer #reasonContent>div{
+    margin-top: 20px;
+    text-align: center;
+}
+#reasonContainer #reasonContent>div>input{
+    float: left;
+}
+
+#exchangeApplyCheckContent .seeInfo, #fixApplyCheckContent .seeInfo, #exchangeApplyCheckContent .seeImage, #fixApplyCheckContent .seeImage {
+    font-size: 12px;
+    color: cornflowerblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#exchangeApplyCheckContent .pass, #fixApplyCheckContent .pass {
+    display: inline-block;
+    background: url("../images/pass.png");
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+#exchangeApplyCheckContent .reject,#fixApplyCheckContent .reject{
+    display:inline-block;
+    margin-left: 15px;
+    background: url("../images/reject.png");
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+#exchangeApplyCheckContent .improve, #fixApplyCheckContent .improve {
+    display: inline-block;
+    margin-left: 15px;
+    background: url("../images/improve.png");
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+#bigContent #rightContent #alertContainer #alertBanner {
+    height: 30px;
+    padding-left: 100px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+    line-height: 30px;
+}
+#bigContent #rightContent #alertContainer #alertBanner *{
+    float: left;
+}
+#alertPage ,#dataPage,#giveOutPage,#exchangePage,#fixPage,#appendPage,#drdcPage,#summaryPage,#levelUpPage,#checkWithPC,#exchangePage,#fixPage,#queryPage,#deleteHistoryPage,#dcHistoryPage,#applyInfoPage{
+    display: none;
+}
+.prev, .next{
+    cursor: pointer;
+}
+
+#bigContent #rightContent #alertContainer #alertContent #alertTable .tz,#alertTable .sq{
+    font-size: 12px;
+    text-decoration: underline;
+    color: cornflowerblue;
+    cursor: pointer;
+}
+#exchangeCheckTable th:first-child, #exchangeCheckTable td:first-child, #fixCheckTable th:first-child, #fixCheckTable td:first-child, #exchangeGiveOutTable th:first-child, #exchangeGiveOutTable td:first-child, #fixGiveOutTable th:first-child, #fixGiveOutTable td:first-child, #exchangeCheckTable th:nth-child(2), #exchangeCheckTable td:nth-child(2), #fixCheckTable th:nth-child(2), #fixCheckTable td:nth-child(2) {
+    display: none
+}
+#alertTable td:last-child, #alertTable td:nth-child(6) {
+    display: none;
+}
+#bigContent #rightContent #giveOutContainer #giveOutContent{
+    padding-top: 10px;
+}
+#exchangeGiveOutTable .giveOut,#fixGiveOutTable .giveOut{
+    color: cornflowerblue;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#editContainer #editBanner,#yearlyContainer .yearlyBanner,#deleteBanner{
+    overflow: hidden;
+}
+#editContainer .tip,#yearlyContainer .tip,#deleteBanner .tip{
+    text-align: left;
+    margin-top: 4px;
+    text-indent: 2em;
+}
+#editContainer .queryInput,#yearlyContainer .queryInput,#deleteContainer .queryInput{
+    width: 60px;
+    margin-right: 10px;
+}
+#editContainer .queryInfoContent,#yearlyContainer .queryInfoContent,#deleteContainer .queryInfoContent{
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+#editContainer .queryInfoContent .queryPicInfo{
+    width: 30%;
+    padding:10% 5%
+}
+#editContainer .queryInfoContent .queryInfo{
+    width: 55%;
+    padding-left: 5%;
+}
+#deleteContainer .queryInfoContent .queryInfo{
+    width: 60%;
+    margin-left: 25%;
+}
+#yearlyContainer .queryPicInfo{
+    padding: 20px;
+}
+#yearlyContainer .queryPicInfo img{
+    width:60%;
+}
+#editContainer .queryInfoContent .queryInfo .date,#yearlyContainer .queryInfo .date,#deleteContainer .queryInfo .date{
+    width: 130px;
+}
+#editContainer .queryInfoContent .queryInfo>div,#yearlyContainer .queryInfo>div,#deleteContainer .queryInfo>div{
+    margin-top: 20px;
+    height: 30px;
+    white-space: nowrap;
+}
+div.sjRemark{
+    width: 130px;
+}
+#editContainer .queryInfoContent .queryInfo>div>*,#yearlyContainer .queryInfo>div>*,#deleteContainer .queryInfo>div>*{
+    float: left;
+    height: 29px;
+    line-height: 30px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.queryInfoContent p{
+}
+#editContainer .queryInfoContent .queryInfo>div>div,#yearlyContainer .queryInfo>div>div,#deleteContainer .queryInfo>div>div{
+    border-bottom: 1px solid #333;
+    font-weight: bold;
+    padding: 0;
+}
+#editContainer .queryInfoContent .queryInfo input,#yearlyContainer .queryInfo input{
+    border:none;
+    font-weight: bold;
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    user-select: initial;
+    -webkit-user-select: unset;
+    font-size: 14px;
+}
+#editContainer .queryInfoContent .queryInfo .payId,#yearlyContainer .queryInfo .archivesId{
+    width: 70px;
+}
+#editContainer .queryInfoContent .queryInfo .driveCodeInput{
+    width: 40px;
+}
+#editContainer .editButtonBanner,#deleteContainer .deleteButtonBanner{
+    display: none;
+    height: 40px;
+    margin-top: 50px;
+}
+.editButtonBanner .rydc,.cjEdit,.infoFix,.logout,.phyTestOk,.phyTestNo,.yearlyCheck{
+    font-size: 12px;
+    margin-right: 50px;
+}
+#deleteContainer .logOutContent{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    display: none;
+    overflow:hidden;
+}
+#uploadImage .modal-body .uploadButton {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor:pointer;
+}
+#uploadImage .modal-body .uploadButton input {
+    position: absolute;
+    cursor: pointer;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+}
+#deleteHistoryTable th:first-child, #deleteHistoryTable td:first-child, #dcHistoryTable th:first-child, #dcHistoryTable td:first-child, #deleteHistoryTable th:nth-child(2), #deleteHistoryTable td:nth-child(2), #dcHistoryTable th:nth-child(2), #dcHistoryTable td:nth-child(2), #appendDCHistoryTable th:first-child, #appendDCHistoryTable td:first-child, #appendDCHistoryTable th:nth-child(2), #appendDCHistoryTable td:nth-child(2) {
+    display: none;
+}
+.thumbnails img{
+    width:120px;
+}
+.thumbnail:hover{
+    cursor: pointer;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    transition: border linear .2s,box-shadow linear .2s;
+    background-color: #f1f1f1;
+}
+#summaryContainer .summaryBanner p{
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+}
+#summaryContainer .summaryBanner .htmlToXls{
+    display: none;
+}
+
+#summaryContainer .summaryContent {
+    overflow: auto;
+}
+#summaryContainer .summaryContent #summaryTable{
+    background-color: white;
+    margin-top: 40px;
+}
+#summaryContainer .summaryContent #summaryTable .title td{
+    font-size: 30px;
+    border: none;
+    height: 80px;
+    line-height: 80px;
+    font-weight: bold;
+    font-family: '宋体';
+}
+#summaryContainer .summaryContent #summaryTable .info td{
+    border: none;
+    font-size: 18px;!important;
+    font-family: '仿宋';
+}
+#summaryContainer .summaryContent tbody th{
+    font-size: 12px;
+    border: 1px solid #333;
+    border-right: none;
+}
+#summaryContainer .summaryContent tbody th:last-child,#summaryContainer .summaryContent tbody td:last-child{
+    border-right: 1px solid #333;
+}
+#summaryContainer .summaryContent tbody th,#summaryContainer .summaryContent tbody td{
+    height: 24px;
+    line-height: 24px;
+    padding: 0 17px 0 17px;
+    border: 1px solid #333;
+    border-right: none;
+    font-size: 14px;
+    white-space: nowrap;
+    user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+body table.table th,body table.table td{
+    text-align: center;
+    white-space: nowrap;
+}
+#drInfo .modal-header #drInfoLabel{
+    font-size: 20px;
+}
+#appendInfoContent .appendInfo{
+    position: absolute;
+    left: 350px;
+    top: 200px;
+    background-color: white;
+    opacity: 1;
+    z-index: 10;
+}
+#appendInfoContent .appendInfo>div{
+    height: 40px;
+}
+#appendInfoContent .appendInfo>div>p,#appendInfoContent .appendInfo>div>div{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+#appendInfoContent .appendInfo>div>div>input{
+    border: none;
+    width: 90px;
+    margin-top: 5px;
+    text-indent: 0.4em;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+#drdcContainer  .table .dr,#appendContainer  .table .ts,#drdcContainer  .table .dc,#deleteHistoryTable .back,#dcHistoryTable .back,#appendDCHistoryTable .back{
+    text-decoration: underline;
+    color: cornflowerblue;
+    cursor: pointer;
+    font-size: 12px;
+}
+#drdcContainer  .table .tz,#drdcContainer  .table .tx{
+    text-decoration: underline;
+    color: cornflowerblue;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 4px;
+}
+#appendBanner #quit,#dr,#exchangeBanner li,#fixBanner li{
+    position: relative;
+}
+#appendBanner #quit .redPoint,#dr .redPoint{
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 7px;
+    height: 7px;
+    display: none;
+    background: url("../images/point.png") no-repeat;
+    background-size: 7px 7px;
+}
+#appendDRTable td:nth-child(2), #appendLZTable td:nth-child(2) {
+    display: none
+}
+#appendContainer .appendContent .float{
+    height: 24px;
+    line-height: 20px;
+    font-size: 12px;
+    width: 68px;
+    border-radius: 6px;
+    background-color: #eee;
+}
+#appendContainer .appendContent .singleAppendForm{
+    overflow: hidden;
+}
+#appendContainer .appendContent .singleAppendForm>div{
+    overflow: hidden;
+    height: 40px;
+    text-align: center;
+    padding-left: 150px;
+}
+#appendContainer .appendContent .singleAppendForm>div p{
+    height: 40px;
+    line-height: 40px;
+}
+#appendContainer .appendContent .singleAppendForm>div input{
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #333;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+#appendContainer .appendContent .singleAppendForm #submitAppend{
+    height: 30px;
+    margin-top: 30px;
+    line-height: 30px;
+    width: 50px;
+    border-radius: 4px;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+#appendContainer .levelUpContent .buttonBanner{
+    overflow: visible;
+    height: 115px;
+}
+#appendContainer .levelUpContent .buttonBanner>div{
+    overflow: visible;
+    width: 150px;
+    height: 70px;
+    border: #999999 1px solid;
+    border-radius: 5px;
+    margin-left: 50px;
+    position: relative;
+    cursor: pointer;
+}
+#appendContainer .levelUpContent .buttonBanner>span{
+    float: left;
+    margin-left: 50px;
+    margin-top: 19px;
+}
+#appendContainer .levelUpContent .buttonBanner p{
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    color: inherit;
+    font-weight: inherit;
+    margin:0;
+}
+#appendContainer .levelUpContent .buttonBanner .question{
+    font-size: 12px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+    font-weight: bold;
+}
+#appendContainer .levelUpContent .content{
+    display: none;
+}
+#appendContainer #uploadContent,#uploadContent2 table{
+    max-height: 500px;
+    overflow: auto;
+}
+
+#uploadContent2 tbody tr{
+    cursor: pointer;
+    transition: 0.5s;
+}
+#uploadContent2 tbody tr:hover{
+    background: #eeeeee;
+}
+#uploadContent2 th:first-child,#uploadContent2 td:first-child{
+    width: 32px;
+}
+#uploadContent2 th:nth-child(2),#uploadContent2 td:nth-child(2){
+    width: 70px;
+}
+#uploadContent2 th:nth-child(3),#uploadContent2 td:nth-child(3){
+    width: 32px;
+}
+#uploadContent2 th:nth-child(4),#uploadContent2 td:nth-child(4){
+    width: 160px;
+}
+#uploadContent2 th:nth-child(5),#uploadContent2 td:nth-child(5){
+    width: 250px;
+}
+#uploadContent2 th:nth-child(6),#uploadContent2 td:nth-child(6){
+    width: 80px;
+}
+#uploadContent2 th:nth-child(7),#uploadContent2 td:nth-child(7){
+    width: 100px;
+}
+#uploadContent2 th:nth-child(8),#uploadContent2 td:nth-child(8){
+    width: 100px;
+}
+#appendContainer #uploadContent table td{
+    overflow: auto;
+    font-size: 12px;
+}
+#appendContainer .uploadExcelContent .confirmUpload{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: 20px;
+    display: none;
+}
+#appendContainer .uploadExcelContent .progressBar{
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width: 325px;
+    background: inherit;
+    display: none;
+}
+#appendContainer .uploadExcelContent .progressBar .floatR span{
+    font-size: 12px;
+    margin-top: 3px;
+}
+#queryFilter.hid{
+    height:0;
+    overflow:hidden;
+    transition:1s
+}
+#queryFilter.vis {
+    height: 120px;
+    overflow: visible;
+    transition: 1s
+}
+#queryFilter .error {
+    border-color: #b94a48;
+    color: #b94a48;
+}
+#queryFilter *:not(h3){
+    font-size:13px;
+}
+#queryFilter ul.dropdown-menu li {
+    padding:6px 0 1px 13px;
+}
+#queryFilter ul.dropdown-menu li:hover, #queryFilter ul.dropdown-menu li:hover span{
+    cursor: pointer;
+    background-color: #08c;
+    color: #fff
+}
+#queryFilter .hidden {
+    visibility: hidden;
+}
+#queryFilter .row{
+    margin:5px 0;
+}
+#applyInfoTable{
+    overflow:auto;
+}
+#applyInfoTable td{
+    white-space:normal;
+}
+#displayImage .thumbnails li{
+    width:24%;
+    margin-right:3%;
+    height:240px;
+    position:relative;
+}
+#displayImage .thumbnails li > div {
+    height:80%;
+    vertical-align: middle;
+    text-align:center;
+}
+#displayImage .thumbnails li > div >img{
+    vertical-align: middle;
+    cursor:pointer;
+}
+#displayImage .thumbnails li > div > span {
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block
+}
+#displayImage .thumbnails li > p {
+    height: 20%;
+    text-align:center;
+}
+#displayImage .thumbnails .zoom {
+    width:auto;
+    z-index:500;
+    display:none;
+    position:absolute;
+}
+#displayImage .thumbnails .zoom img{
+    width:480px;
+
+}

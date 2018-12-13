@@ -1,0 +1,11 @@
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\obj\Debug\jszgl.csproj.CoreCompileInputs.cache
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\bin\jszgl.dll.config
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\bin\jszgl.dll
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\bin\jszgl.pdb
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\bin\Newtonsoft.Json.dll
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\bin\Newtonsoft.Json.pdb
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\bin\Newtonsoft.Json.xml
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\obj\Debug\jszgl.csproj.CopyComplete
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\obj\Debug\jszgl.dll
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\obj\Debug\jszgl.pdb
+C:\Users\LYJWD\Source\Repos\jszgl\jszgl\obj\Debug\jszgl.csprojResolveAssemblyReference.cache
