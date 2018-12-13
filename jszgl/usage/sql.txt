@@ -1,0 +1,10 @@
+truncate table 表名		清空表
+新增列：alter table tableName add columnName varchar(30)
+改列名：EXEC  sp_rename   'tableName.column1' , 'column2'
+选取档案号为奇数：convert(int,archivesid)%2=1
+
+
+
+
+
+
